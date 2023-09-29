@@ -10,15 +10,14 @@ class AdScreenWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Stack(
       alignment: Alignment.center,
       children: [
         Image(
           image: AssetImage('assets/images/${image}'),
           fit: BoxFit.cover,
-          width: double.infinity,
-          height: double.infinity,
+          width: Get.width,
+          height: Get.height * 0.3,
         ),
         Positioned(
           left: 10,
@@ -26,8 +25,18 @@ class AdScreenWidgets extends StatelessWidget {
           child: AutoSizeText(
             '$text',
             style: TextStyle(
-                color: kTextColor, fontSize: 18, fontWeight: FontWeight.bold),
-            maxFontSize: 20,
+              color: kBackgroundColor,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              shadows: [
+                Shadow(
+                  color: Colors.black, // Warna bayangan teks
+                  blurRadius: 5.0, // Jarak blur bayangan
+                  offset: Offset(2, 2), // Posisi bayangan (offsetX, offsetY)
+                ),
+              ],
+            ),
+            maxFontSize: 30,
             minFontSize: 18,
             maxLines: 4,
           ),

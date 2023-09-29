@@ -23,6 +23,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   get: ^4.6.6
   carousel_slider: ^4.2.1
+  cached_network_image: ^3.3.0
 
 dev_dependencies:
   flutter_test:
@@ -41,6 +42,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+  # - assets/images/menu
 
   #
   fonts:
